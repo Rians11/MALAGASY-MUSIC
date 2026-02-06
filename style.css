@@ -750,31 +750,61 @@ body{
 .hero--small{ height:260px; }
 .hero--small .tiles{ display:none; }
 
+/* =========================
+   MOBILE PERFECT (Home)
+========================= */
 @media (max-width: 600px){
-  .nav{
-    top: 24px;
-    padding: 0 16px;
-  }
 
-  .brand{
-    font-size: 30px;
-    letter-spacing: 3px;
-  }
-
+  /* HERO: stable height on mobile (iOS/Android) */
   .hero{
-    height: 85vh;
+    height: 100svh;
   }
 
-  .hero--small{
-    height: 200px;
+  /* NAV: better spacing + safe area */
+  .nav{
+    top: 26px;
+    padding: 0 18px;
   }
 
-  .footer-main{
-    grid-template-columns: 1fr;
-    gap: 40px;
+  /* Brand: smaller but still premium */
+  .brand{
+    font-size: 34px;
+    letter-spacing: 3px;
+    line-height: 1.05;
   }
 
-  .footer-right{
-    align-items: flex-start;
+  /* icons closer + consistent */
+  .nav-right{
+    gap: 10px;
+  }
+  .icon-btn{
+    width: 40px;
+    height: 40px;
+  }
+
+  /* tiles: stop overflow/cut */
+  .tiles{
+    height: 58svh;
+  }
+
+  /* text inside tiles */
+  .text{
+    bottom: 26px;
+    left: 18px;
+  }
+  .text h2{
+    font-size: 30px;
+    white-space: nowrap;
+  }
+  .text span{
+    font-size: 12px;
+  }
+  .line{
+    width: 44px;
+  }
+
+  /* avoid bottom bar issues */
+  body{
+    padding-bottom: env(safe-area-inset-bottom);
   }
 }
