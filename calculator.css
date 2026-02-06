@@ -108,7 +108,7 @@
 .calc-back:hover{
   opacity: 1;
 }
-/* ===== Calculator responsive fix (mobile) ===== */
+/* ===== Calculator (mobile) ===== */
 .calculator-wrap{
   width: min(520px, 92vw);
   margin: 0 auto;
@@ -123,11 +123,11 @@
 
 .calc-display input{
   flex: 1;
-  min-width: 0;          /* super important pour éviter overflow */
+  min-width: 0;       
 }
 
 .calc-display .clear{
-  flex: 0 0 64px;        /* largeur fixe du C */
+  flex: 0 0 64px;        
 }
 
 /* buttons grid */
