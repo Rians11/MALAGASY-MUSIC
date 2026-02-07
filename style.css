@@ -750,61 +750,61 @@ body{
 .hero--small{ height:260px; }
 .hero--small .tiles{ display:none; }
 
+
 /* =========================
-   MOBILE PERFECT (Home)
+   MOBILE FIX
 ========================= */
 @media (max-width: 600px){
 
-  /* HERO: stable height on mobile (iOS/Android) */
   .hero{
-    height: 100svh;
+    min-height: 100svh;    
+    height: auto;          
   }
 
-  /* NAV: better spacing + safe area */
+  :root{
+    --gutter: 18px;        
+  }
+
   .nav{
-    top: 26px;
-    padding: 0 18px;
+    top: 22px;
+    padding: 0 var(--gutter);
   }
 
-  /* Brand: smaller but still premium */
   .brand{
-    font-size: 34px;
-    letter-spacing: 3px;
-    line-height: 1.05;
+    font-size: 32px;
+    letter-spacing: 2px;
   }
 
-  /* icons closer + consistent */
-  .nav-right{
-    gap: 10px;
-  }
-  .icon-btn{
-    width: 40px;
-    height: 40px;
-  }
-
-  /* tiles: stop overflow/cut */
+ 
   .tiles{
-    height: 58svh;
+    height: auto;
+    min-height: 62svh;
+    flex-direction: column; 
   }
 
-  /* text inside tiles */
+  .tile{
+    min-height: 20svh;
+    filter: grayscale(30%); 
+  }
+
   .text{
-    bottom: 26px;
+    bottom: 18px;
     left: 18px;
+    right: 18px;
   }
+
   .text h2{
-    font-size: 30px;
-    white-space: nowrap;
+    font-size: 28px;
+    white-space: normal;    
+    line-height: 1.1;
   }
+
   .text span{
     font-size: 12px;
   }
-  .line{
-    width: 44px;
-  }
 
-  /* avoid bottom bar issues */
   body{
+    overflow-x: hidden;
     padding-bottom: env(safe-area-inset-bottom);
   }
 }
