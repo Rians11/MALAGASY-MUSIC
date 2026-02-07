@@ -754,57 +754,36 @@ body{
 /* =========================
    MOBILE FIX
 ========================= */
+
+
 @media (max-width: 600px){
-
-  .hero{
-    min-height: 100svh;    
-    height: auto;          
-  }
-
-  :root{
-    --gutter: 18px;        
-  }
-
-  .nav{
-    top: 22px;
-    padding: 0 var(--gutter);
-  }
-
-  .brand{
-    font-size: 32px;
-    letter-spacing: 2px;
-  }
-
- 
   .tiles{
-    height: auto;
-    min-height: 62svh;
-    flex-direction: column; 
+    display:flex !important;
+    flex-direction: row !important; 
+    height: 60svh !important;
   }
-
   .tile{
-    min-height: 20svh;
-    filter: grayscale(30%); 
-  }
-
-  .text{
-    bottom: 18px;
-    left: 18px;
-    right: 18px;
+    flex: 1 !important;
+    min-width: 0 !important;
   }
 
   .text h2{
-    font-size: 28px;
-    white-space: normal;    
-    line-height: 1.1;
+    font-size: 26px !important;
+    white-space: normal !important;
+    line-height: 1.05 !important;
+  }
+}
+
+@media (max-width: 600px){
+  .feature-image.slider{
+    height: 320px !important;
+  }
+  .feature-image.slider .slides img{
+    object-fit: cover !important;  
+    object-position: center !important;
   }
 
-  .text span{
-    font-size: 12px;
-  }
-
-  body{
-    overflow-x: hidden;
-    padding-bottom: env(safe-area-inset-bottom);
+  .feature-inner{
+    gap: 28px !important;
   }
 }
