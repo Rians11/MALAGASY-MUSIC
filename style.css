@@ -884,7 +884,20 @@ body{
     height: auto !important;      
     aspect-ratio: 16 / 10;           
     border-radius: 18px !important
+    
 }
+
+  .feature-image img,
+  .feature-image.slider .slides img{
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block;
+  }
+
+  /* texte clean */
+  .feature-title{ font-size: 34px !important; }
+  .feature-text{ font-size: 15px !important; line-height: 1.65 !important; }
   /* ===== NEWS ===== */
   .news-grid{
     grid-template-columns:1fr;
